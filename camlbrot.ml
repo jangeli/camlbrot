@@ -56,6 +56,10 @@ let exemple2 = make_window (640,480) (-1.375,0.085) 0.02;;
 let exemple3 = make_window (640,480) (-0.562,-0.643) 0.15;;
 let exemple4 = make_window (1280,960) (-0.7513,0.0251) 0.006;;
 let exemple5 = make_window (1280,960) (0.3023,-0.024) 0.011;;
+let exemple6 = make_window (1280,960) (0.3023,-0.024) 0.002;;
+let exemple7 = make_window (1280,960) (-1.5220078,-0.000323) 0.000001;;
+let exemple8 = make_window (1280,960) (-1.5220078,-0.000323) 0.0000001;;
+
 
 
 
@@ -85,7 +89,8 @@ let distance re im maxiter =
 
 (********************************
  Convertit une distance en couleur.
- On aplatit avec un log (on pourrait aussi prendre sqrt pour avoir un style différent)
+ On aplatit avec un log (on pourrait aussi prendre sqrt
+ ou une autre fonction aplatissante pour avoir un style différent),
  et on tourne dans l'espace des couleurs.
 ********************************)
 let color d =
@@ -178,6 +183,9 @@ let mandelbrot w maxiter =
 (*mandelbrot exemple3 300;;*)
 (*mandelbrot exemple4 10000;;*)
 mandelbrot exemple5 10000;;
+(*mandelbrot exemple6 50000;;*)
+(*mandelbrot exemple7 10000;; (* Ici aplatir avec sqrt est intéressant *) *)
+(*mandelbrot exemple8 10000;; (* Ici aplatir avec sqrt est intéressant *) *)
 
 
 
