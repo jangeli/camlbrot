@@ -127,9 +127,9 @@ let mandelbrot w maxiter =
 				| x when x=black -> ()
 				| x when x=white ->
 					let c = color (distance
-										(float_of_int i *. w.pixsize +. w.xmin)
-										(float_of_int j *. w.pixsize +. w.ymin)
-										maxiter) in
+							(float_of_int i *. w.pixsize +. w.xmin)
+							(float_of_int j *. w.pixsize +. w.ymin)
+							maxiter) in
 					allblack := !allblack & (c=black);
 					set_color c;
 					plot i j 
